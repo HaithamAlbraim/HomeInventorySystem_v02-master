@@ -45,10 +45,12 @@ namespace HomeInventorySystem_v01.DataAccessLayer
         }
 
         public static void DeleteUser(User user)
+             
         {
-            string commandText = $"Delete from SystemUsers where UserId = {user.UserId} ";
+            /*string commandText0 = $" ";*/
+            string commandText = $"Delete from Items where UserId={user.UserId} Delete from SystemUsers where UserId = {user.UserId}";
                 
-                 string commandText0 = $" Delete from Items where UserId={user.UserId}";
+                
 
             SqlCommand command = new SqlCommand(commandText, connection);
 

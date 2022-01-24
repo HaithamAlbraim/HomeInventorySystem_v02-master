@@ -46,9 +46,11 @@
             // 
             this.txtPasswordD.Location = new System.Drawing.Point(332, 142);
             this.txtPasswordD.Name = "txtPasswordD";
+            this.txtPasswordD.PasswordChar = '*';
             this.txtPasswordD.Size = new System.Drawing.Size(100, 20);
             this.txtPasswordD.TabIndex = 1;
             this.txtPasswordD.TextChanged += new System.EventHandler(this.txtPasswordD_TextChanged);
+            this.txtPasswordD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPasswordD_KeyPress);
             // 
             // btnDeleteUser
             // 
@@ -70,6 +72,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frmDeleteUser";
             this.Text = "frmDeleteUser";
+            this.Load += new System.EventHandler(this.frmDeleteUser_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
