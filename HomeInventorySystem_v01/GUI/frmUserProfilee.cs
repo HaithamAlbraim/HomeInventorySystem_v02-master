@@ -75,5 +75,15 @@ namespace HomeInventorySystem_v01.GUI
             frmDeleteUser frm = new frmDeleteUser();
             frm.ShowDialog();
         }
+
+        private void txtFirstN_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
+        }
+
+        private void txtLastN_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
+        }
     }
 }

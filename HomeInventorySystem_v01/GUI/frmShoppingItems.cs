@@ -147,6 +147,24 @@ namespace HomeInventorySystem_v01.GUI
             dataGridViewItems.DataSource = ItemsDAL.GetAllItems( frmLogin.CurentUser);
         }
 
-        
+        private void txtItemName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtItemName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
+        }
+
+        private void txtUnit_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtUnit_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
+        }
     }
 }

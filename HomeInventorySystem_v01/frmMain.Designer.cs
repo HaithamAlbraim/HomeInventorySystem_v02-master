@@ -50,8 +50,6 @@ namespace HomeInventorySystem_v01
             this.treeViewNavigation = new System.Windows.Forms.TreeView();
             this.imageListNavigation = new System.Windows.Forms.ImageList(this.components);
             this.panelContent = new System.Windows.Forms.Panel();
-            this.btnEditUser = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.panelHeader.SuspendLayout();
             this.panelApplication.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -83,8 +81,6 @@ namespace HomeInventorySystem_v01
             // 
             this.panelApplication.BackColor = System.Drawing.Color.White;
             this.panelApplication.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelApplication.Controls.Add(this.button1);
-            this.panelApplication.Controls.Add(this.btnEditUser);
             this.panelApplication.Controls.Add(this.btnExit);
             this.panelApplication.Controls.Add(this.lblDisplayName);
             this.panelApplication.Controls.Add(this.pictureBox1);
@@ -192,26 +188,6 @@ namespace HomeInventorySystem_v01
             this.panelContent.Size = new System.Drawing.Size(1047, 496);
             this.panelContent.TabIndex = 3;
             // 
-            // btnEditUser
-            // 
-            this.btnEditUser.Location = new System.Drawing.Point(694, 41);
-            this.btnEditUser.Name = "btnEditUser";
-            this.btnEditUser.Size = new System.Drawing.Size(75, 23);
-            this.btnEditUser.TabIndex = 3;
-            this.btnEditUser.Text = "Edit User";
-            this.btnEditUser.UseVisualStyleBackColor = true;
-            this.btnEditUser.Click += new System.EventHandler(this.btnEditUser_Click);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(454, 41);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -248,7 +224,5 @@ namespace HomeInventorySystem_v01
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.TreeView treeViewNavigation;
         private System.Windows.Forms.ImageList imageListNavigation;
-        private System.Windows.Forms.Button btnEditUser;
-        private System.Windows.Forms.Button button1;
     }
 }

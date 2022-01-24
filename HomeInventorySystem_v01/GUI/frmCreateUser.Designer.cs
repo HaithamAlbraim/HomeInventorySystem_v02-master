@@ -55,6 +55,7 @@
             this.txtUserFName.Name = "txtUserFName";
             this.txtUserFName.Size = new System.Drawing.Size(100, 20);
             this.txtUserFName.TabIndex = 1;
+            this.txtUserFName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUserFName_KeyPress);
             // 
             // txtUserLName
             // 
@@ -62,6 +63,7 @@
             this.txtUserLName.Name = "txtUserLName";
             this.txtUserLName.Size = new System.Drawing.Size(100, 20);
             this.txtUserLName.TabIndex = 3;
+            this.txtUserLName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUserLName_KeyPress);
             // 
             // label2
             // 
@@ -76,6 +78,7 @@
             // 
             this.txtUserPasswordC.Location = new System.Drawing.Point(305, 281);
             this.txtUserPasswordC.Name = "txtUserPasswordC";
+            this.txtUserPasswordC.PasswordChar = '*';
             this.txtUserPasswordC.Size = new System.Drawing.Size(100, 20);
             this.txtUserPasswordC.TabIndex = 5;
             // 

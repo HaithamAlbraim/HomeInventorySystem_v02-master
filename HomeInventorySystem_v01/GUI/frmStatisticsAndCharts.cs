@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HomeInventorySystem_v01.DataAccessLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,11 @@ namespace HomeInventorySystem_v01.GUI
         public frmStatisticsAndCharts()
         {
             InitializeComponent();
+        }
+
+        private void frmStatisticsAndCharts_Load(object sender, EventArgs e)
+        {
+            lbItems.Items.Add(ItemsDAL.Statistics(frmLogin.CurentUser.UserId).ItemName);
         }
     }
 }

@@ -31,6 +31,8 @@ namespace HomeInventorySystem_v01.DataAccessLayer
 
         public static void UpdateItem(Item item)
         {
+            
+         
             string commandText = $"Update Items Set " +
                 $"ItemName = '{item.ItemName}', " +
                 $"Unit = '{item.Unit}', " +
@@ -98,6 +100,34 @@ namespace HomeInventorySystem_v01.DataAccessLayer
 
         }
 
+        public static Item Statistics(int userId)
+        {
+            Item item = new Item();
+
+            string commandText = $"Select  * from Items where UserId={userId} and Quantity<4 ";
+            SqlCommand command = new SqlCommand(commandText, connection);
+
+            connection.Open();
+
+            SqlDataReader itemReader = command.ExecuteReader();
+
+            if (itemReader.HasRows)
+            {
+                while (itemReader.Read())
+                {
+                    item.ItemId = itemReader.GetInt32(0);
+                    item.ItemName = itemReader.GetString(1);
+                    item.Unit = itemReader.GetString(2);
+                    item.Quantity = itemReader.GetDouble(3);
+                    item.UserId = itemReader.GetInt32(4);
+
+                }
+            }
+
+            connection.Close();
+            return item;
+
+        }
 
     }
 }

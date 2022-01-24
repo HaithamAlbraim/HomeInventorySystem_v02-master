@@ -57,6 +57,7 @@
             this.txtFirstN.Name = "txtFirstN";
             this.txtFirstN.Size = new System.Drawing.Size(100, 20);
             this.txtFirstN.TabIndex = 1;
+            this.txtFirstN.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFirstN_KeyPress);
             // 
             // txtLastN
             // 
@@ -65,6 +66,7 @@
             this.txtLastN.Size = new System.Drawing.Size(100, 20);
             this.txtLastN.TabIndex = 3;
             this.txtLastN.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.txtLastN.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLastN_KeyPress);
             // 
             // label2
             // 
@@ -80,6 +82,7 @@
             // 
             this.txtNewPasswordN.Location = new System.Drawing.Point(320, 189);
             this.txtNewPasswordN.Name = "txtNewPasswordN";
+            this.txtNewPasswordN.PasswordChar = '*';
             this.txtNewPasswordN.Size = new System.Drawing.Size(100, 20);
             this.txtNewPasswordN.TabIndex = 5;
             this.txtNewPasswordN.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
@@ -97,6 +100,7 @@
             // 
             this.txtPasswordN.Location = new System.Drawing.Point(95, 189);
             this.txtPasswordN.Name = "txtPasswordN";
+            this.txtPasswordN.PasswordChar = '*';
             this.txtPasswordN.Size = new System.Drawing.Size(100, 20);
             this.txtPasswordN.TabIndex = 7;
             // 

@@ -29,17 +29,27 @@ namespace HomeInventorySystem_v01.GUI
         /// </summary>
         private void InitializeComponent()
         {
+            this.lbItems = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
+            // 
+            // lbItems
+            // 
+            this.lbItems.FormattingEnabled = true;
+            this.lbItems.Location = new System.Drawing.Point(268, 108);
+            this.lbItems.Name = "lbItems";
+            this.lbItems.Size = new System.Drawing.Size(229, 95);
+            this.lbItems.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(369, 219);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(294, 70);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 13);
+            this.label1.Size = new System.Drawing.Size(161, 25);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Statistics";
+            this.label1.Text = "Item i need <4";
             // 
             // frmStatisticsAndCharts
             // 
@@ -47,8 +57,10 @@ namespace HomeInventorySystem_v01.GUI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbItems);
             this.Name = "frmStatisticsAndCharts";
             this.Text = "frmStatisticsAndCharts";
+            this.Load += new System.EventHandler(this.frmStatisticsAndCharts_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -56,6 +68,7 @@ namespace HomeInventorySystem_v01.GUI
 
         #endregion
 
+        private System.Windows.Forms.ListBox lbItems;
         private System.Windows.Forms.Label label1;
     }
 }

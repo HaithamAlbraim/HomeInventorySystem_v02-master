@@ -17,13 +17,9 @@ namespace HomeInventorySystem_v01.GUI
     public partial class frmLogin : Form
     {
         public static User CurentUser = new User();
-        public int My { get; set; }
+        
 
-
-        /* private static string connectionString = "Data Source =localhost; " +
-                "Initial Catalog = PersonalShopping; Integrated Security = True";
-
-         private static readonly SqlConnection connection = new SqlConnection(connectionString);*/
+       
 
         public frmLogin()
         {
@@ -34,23 +30,6 @@ namespace HomeInventorySystem_v01.GUI
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            /*SqlCommand command= new SqlCommand("select (UserId) from SystemUsers where UserName=@UserName and Password =@Password", connection);
-            command.Parameters.AddWithValue("@UserName", txtUserNameL.Text);
-            command.Parameters.AddWithValue("@Password", txtPasswordL.Text);
-            SqlDataAdapter sda = new SqlDataAdapter(command);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            
-            //Connection open here   
-            connection.Open();
-            int i = command.ExecuteNonQuery();
-            connection.Close();
-            if (dt.Rows.Count > 0)*/
-            /*UsersDAL.GetUserBYUserNamePass(txtUserNameL.Text, txtPasswordL.Text);*/
-            /*CurentUser.Username = UsersDAL.GetUserBYUserNamePass(userName:txtUserNameL.Text,Password:txtPasswordL.Text).Username;*/
-            /* CurentUser.Password = UsersDAL.GetUserBYUserNamePass(userName:txtUserNameL.Text,Password:txtPasswordL.Text).Password;*/
-            /* CurentUser = UsersDAL.GetUserBYUserNamePass(userName:txtUserNameL.Text, Password:txtPasswordL.Text);*/
-           
            
             UsersDAL.GetUserBYUserNamePass(userName:txtUserNameL.Text,Password:txtPasswordL.Text);
            
@@ -61,15 +40,14 @@ namespace HomeInventorySystem_v01.GUI
             {
                 
                 MessageBox.Show("Successfully loged in");
-                My = CurentUser.UserId;
-               
+              
 
 
 
 
                     MessageBox.Show(CurentUser.UserId.ToString());
 
-                //after successful it will redirect  to next page .  
+              
                 this.Close();
             }
            

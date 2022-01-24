@@ -58,6 +58,8 @@ namespace HomeInventorySystem_v01.GUI
             this.txtItemName.Name = "txtItemName";
             this.txtItemName.Size = new System.Drawing.Size(530, 20);
             this.txtItemName.TabIndex = 1;
+            this.txtItemName.TextChanged += new System.EventHandler(this.txtItemName_TextChanged);
+            this.txtItemName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtItemName_KeyPress);
             // 
             // label2
             // 
@@ -74,6 +76,8 @@ namespace HomeInventorySystem_v01.GUI
             this.txtUnit.Name = "txtUnit";
             this.txtUnit.Size = new System.Drawing.Size(266, 20);
             this.txtUnit.TabIndex = 3;
+            this.txtUnit.TextChanged += new System.EventHandler(this.txtUnit_TextChanged);
+            this.txtUnit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUnit_KeyPress);
             // 
             // txtQuantity
             // 
